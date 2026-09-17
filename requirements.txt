@@ -1,0 +1,8 @@
+flask
+sqlalchemy
+pydantic
+flask
+faster-whisper
+pyttsx3
+pyaudio
+twilio
