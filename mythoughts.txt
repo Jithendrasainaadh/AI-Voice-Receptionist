@@ -1,2 +1,15 @@
+# Schema and reason
 - app.py is for APIcalling 
 - 
+# Architecture of the project
+User speaks → VAD triggers → Interrupt flag set
+                ↓
+         [TTS aborts, audio stops]
+                ↓
+         [LLM generation aborts]
+                ↓
+         New ASR chunk processed
+                ↓
+         LLM gets: "<system>User interrupted.</system>\nUser: [new text]"
+                ↓
+         New response generated
